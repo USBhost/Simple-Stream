@@ -223,7 +223,7 @@ static int lowmem_shrink(struct shrinker *s, struct shrink_control *sc)
 			task_unlock(p);
 			continue;
 		}
-		if (swap_info.freeswap > total_swap_pages/5) {
+		if (swap_info.freeswap > total_swap_pages/3) {
 			task_unlock(p);
 			continue;
 		}
